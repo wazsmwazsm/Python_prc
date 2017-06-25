@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding:UTF-8 -*-
 
 # 都好会变为空格分隔
