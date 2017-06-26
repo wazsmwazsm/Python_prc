@@ -11,3 +11,7 @@ print("秦先生你好!")
 name = input('输入你的名字:')
 
 print('hello', name)
+
+# 不换行输出
+print('---', end=" ")
+print('aaa', end=" ")
