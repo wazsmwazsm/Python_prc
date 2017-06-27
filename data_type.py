@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding:UTF-8 -*-
 
+# 多行字符串
 print('''line1
-... line2
-... line3''')
+ line2
+ line3''')
+
+word = '字符串'
+sentence = "这是一个句子。"
+paragraph = """这是一个段落，
+可以由多行组成"""
+
+print(word, sentence, paragraph)
 
 
 # 地板除
