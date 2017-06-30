@@ -89,3 +89,10 @@ if ( a is not b ):
    print ("4 - a 和 b 没有相同的标识")
 else:
    print ("4 - a 和 b 有相同的标识")
+
+# number Transformation
+x = 3.44
+y = 3.4
+print(int(x))
+print(complex(x))
+print(complex(x, y))
