@@ -21,7 +21,7 @@ str = 'Runoob'
 print (str)          # 输出字符串
 print (str[0:-1])    # 输出第一个到倒数第二个的所有字符
 print (str[0])       # 输出字符串第一个字符
-print (str[2:5])     # 输出从第三个开始到第五个的字符(包含 5)
+print (str[2:5])     # 输出从第三个开始到第五个的字符( 不包含 5，这里代表第几个)
 print (str[2:])      # 输出从第三个开始的后的所有字符
 print (str * 2)      # 输出字符串两次
 print (str + "TEST") # 连接字符串
@@ -109,3 +109,6 @@ print(a)
 # 注意 遍历 dict 的话，默认遍历的是键值
 for x in a:
     print(x, a[x])
+
+# 函数也是对象，不过是一个基础类生成的
+print(type(print))
