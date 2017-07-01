@@ -21,3 +21,7 @@ print(classmates)
 
 s = [1,2,[3,4]]
 print(s, len(s), s[2][1])
+
+# slice
+a = [1,2,3,4,5]
+print(a[0:4])
