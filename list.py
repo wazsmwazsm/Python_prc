@@ -72,6 +72,7 @@ b.clear()
 print(b)
 
 # 不拷贝直接赋值的话，是添加数据引用，clear 后都没数据了
+# 因为 list 和 dict 都是传址的
 b = a;
 print(a,b)
 a.clear()
