@@ -25,3 +25,8 @@ print(s, len(s), s[2][1])
 # slice
 a = [1,2,3,4,5]
 print(a[0:4])
+
+# list 合并
+squares = [1, 4, 9, 16, 25]
+squares += [36, 49, 64, 81, 100]
+print(squares)
