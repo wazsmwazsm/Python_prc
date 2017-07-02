@@ -30,3 +30,7 @@ print(a[0:4])
 squares = [1, 4, 9, 16, 25]
 squares += [36, 49, 64, 81, 100]
 print(squares)
+
+# 删除元素
+del squares[2]
+print(squares)
