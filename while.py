@@ -10,3 +10,11 @@ while n <= 100:
     n += 1
 
 print(sum)
+
+# while else
+count = 0
+while count < 5:
+    print(count, " 小于 5 ")
+    count += 1
+else:
+    print(count, " 大于等于 5 ")
