@@ -34,6 +34,16 @@ def fun1():
 fun1()
 print(num)
 
+# globals()
+num = 1
+def fun1():
+    print(num)
+    globals()['num'] = 123 # 使用 globals 直接获取全局变量
+    print(num)
+
+fun1()
+print(num)
+
 # nonlocal 关键字
 def outer():
     num = 10
@@ -43,4 +53,14 @@ def outer():
         print(num)
     inner()
     print(num)
+    
 outer()
+
+# locals() 获取所有的局部参数, 打包成一个 dict
+def aa():
+    a = 1
+    b = 2
+    c = 3
+    print(locals())
+
+aa()
