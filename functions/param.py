@@ -30,10 +30,10 @@ def add_end(L=[]):
     L.append('END')
     return L
 
-add_end([1, 2, 3])
-add_end(['x', 'y', 'z'])
-add_end() # 当开始不传参数时，会每次都是用默认的 [] 的那个 list 对象
-add_end() # 出现数据不对的问题
+print(add_end([1, 2, 3]))
+print(add_end(['x', 'y', 'z']))
+print(add_end()) # 当开始不传参数时，会每次都是用默认的 [] 的那个 list 对象
+print(add_end()) # 出现数据不对的问题
 
 # 可变参数
 def calc(*numbers):
