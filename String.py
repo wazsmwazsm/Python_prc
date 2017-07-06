@@ -53,3 +53,6 @@ ONCLICK="window.history.back()"></FORM>
 </BODY></HTML>
 '''
 print(errHTML)
+
+# 切片
+print('ABCDEFG'[:3])
