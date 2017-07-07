@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding:UTF-8 -*-
 
+# 查看是否能迭代
+from collections import Iterable
+print(isinstance('abc', Iterable))   # True
+print(isinstance([1,2,3], Iterable)) # True
+print(isinstance(123, Iterable))     # False
+
 list=[1,2,3,4]
 
 # 创建迭代器对象
@@ -20,15 +26,25 @@ import sys
 list=[5,6,7,8]
 it = iter(list)
 
-while True:
-    try:
-        print(next(it))
-    except StopIteration:
-        sys.exit()
+# 防止死循环，用 StopIteration 来停止迭代
+# while True:
+#     try:
+#         print(next(it))
+#     except StopIteration:
+#         sys.exit()
 
 # generator 生成器
 
-# 生成器函数 - 斐波那契
+# 简单的生成器
+g = (x * x for x in range(10))
+print(type(g))
+print(next(g))
+print(next(g))
+# 生成器也是可迭代对象
+for i in g:
+    print(i)
+
+# 另一种定义生成器的方法 ： 生成器函数
 def fibonacci(n):
     a, b, counter = 0, 1, 0
     while True:
@@ -39,15 +55,29 @@ def fibonacci(n):
         counter += 1
 
 f = fibonacci(10) # f 是一个迭代器，由生成器返回生成
+# print 的时候无法这样做，现在可以直接迭代了
+for i in fibonacci(10):
+    print(i)
 
+
+
+# 防止死循环，用 StopIteration 来停止迭代
+
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        yield b
+        a, b = b, a + b
+        n = n + 1
+    return 'done'
+
+
+# 生成器中没有 return 返回值的时候要这么做
+g = fib(6)
 while True:
     try:
-        print (next(f), end=" ")
-    except StopIteration:
-        sys.exit()
-
-# 查看是否能迭代
-from collections import Iterable
-isinstance('abc', Iterable)   # True
-isinstance([1,2,3], Iterable) # True
-isinstance(123, Iterable)     # False
+        x = next(g)
+        print('g:', x)
+    except StopIteration as e:
+        print('Generator return value:', e.value)
+        break
