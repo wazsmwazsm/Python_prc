@@ -57,6 +57,11 @@ print(rst)
 rst = [str(round(355/113, i)) for i in range(1, 6)]
 print(rst)
 
+# 获取文件目录
+import os
+print([d for d in os.listdir('.')])
+
+
 # 列表嵌套
 # 矩阵行列转换
 matrix = [
@@ -115,6 +120,10 @@ knights = {'gallahad': 'the pure', 'robin': 'the brave'}
 
 for k, v in knights.items():  # items 取出键和值，单单遍历 dict 只能取到键
     print(k, v)
+
+d = {'x': 'A', 'y': 'B', 'z': 'C' }
+print({k:v for k, v in d.items()}) # dict 无序，结果的顺序可能是随机的
+
 
 # 获取索引和值
 for i, v in enumerate(['tic', 'tac', 'toe']):
