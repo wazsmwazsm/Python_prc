@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding:UTF-8 -*-
 
+from collections import Iterable, Iterator
+
 # 查看是否能迭代
-from collections import Iterable
 print(isinstance('abc', Iterable))   # True
 print(isinstance([1,2,3], Iterable)) # True
 print(isinstance(123, Iterable))     # False
+
+# 是否是迭代器
+print(isinstance((x for x in range(10)), Iterator))
+print(isinstance([], Iterator))
+print(isinstance({}, Iterator))
+print(isinstance('abc', Iterator))
+print(isinstance(iter('abc'), Iterator))
 
 list=[1,2,3,4]
 
