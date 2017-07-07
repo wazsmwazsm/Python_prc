@@ -45,3 +45,9 @@ while True:
         print (next(f), end=" ")
     except StopIteration:
         sys.exit()
+
+# 查看是否能迭代
+from collections import Iterable
+isinstance('abc', Iterable)   # True
+isinstance([1,2,3], Iterable) # True
+isinstance(123, Iterable)     # False
