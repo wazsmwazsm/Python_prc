@@ -29,3 +29,9 @@ for letter in 'Runoob':
 a = ['Google', 'Baidu', 'Runoob', 'Taobao', 'QQ']
 for i in range(len(a)):
     print(i, a[i])
+
+# items 遍历
+knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+
+for k, v in knights.items():  # items 取出键和值，单单遍历 dict 只能取到键
+    print(k, v)
