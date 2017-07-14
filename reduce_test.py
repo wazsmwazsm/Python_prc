@@ -29,3 +29,22 @@ def str2int(s):
     return reduce(lambda x, y: x * 10 + y, map(char2num, s))
 
 print(str2int('7788565'))
+
+# 编写 str2float 函数
+# 思路 ：1234567 / 10000 = 123.4567 取得小数点的位置就好
+
+def str2float(s):
+    def char2num(s):
+        return {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}[s]
+
+    if(s.find('-') == 0):
+        neg = -1
+        s = s[s.index('-') + 1:]
+    else:
+        neg = 1
+
+    idot = s.index('.')
+    num = s[:idot] +  s[idot+1:]
+    return reduce(lambda x, y: x * 10 + y, map(char2num, num)) * neg / (10 ** (len(s) - s.index('.') - 1))
+
+print(str2float('-5245332.53564'))
