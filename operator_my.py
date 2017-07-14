@@ -96,3 +96,8 @@ y = 3.4
 print(int(x))
 print(complex(x))
 print(complex(x, y))
+
+# 没有三元运算符，但是有代替
+a = 'hello' if True else 'fuck'
+b = 'hello' if False else 'fuck'
+print(a, b)
