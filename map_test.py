@@ -11,3 +11,8 @@ r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])
 print(list(r))
 
 print(list(map(str, [1, 2, 3, 4, 5, 6, 7, 8, 9])))
+
+
+# 首字母大写
+
+print(list(map(lambda a: a.capitalize(), ['adam', 'LISA', 'barT'])))
