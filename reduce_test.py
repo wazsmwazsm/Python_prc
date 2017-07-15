@@ -45,6 +45,8 @@ def str2float(s):
 
     idot = s.index('.')
     num = s[:idot] +  s[idot+1:]
-    return reduce(lambda x, y: x * 10 + y, map(char2num, num)) * neg / (10 ** (len(s) - s.index('.') - 1))
+    deno = (10 ** (len(s) - idot - 1))
+    return reduce(lambda x, y: x * 10 + y, map(char2num, num)) * neg / deno
 
-print(str2float('-5245332.53564'))
+print(str2float('-52.535634'))
+print(str2float('12.0045'))
