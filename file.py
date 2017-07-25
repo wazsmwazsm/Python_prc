@@ -3,27 +3,27 @@
 
 
 # 打开、写入
-# f = open('./foo.txt', 'a+')
-# # 返回写入的字符数
-# num = f.write("Hello world")
-# print(num)
-# f.close()
+f = open('./foo.txt', 'a+')
+# 返回写入的字符数
+num = f.write("Hello world")
+print(num)
+f.close()
 
 # 读取一行
-# f = open('./foo.txt', 'r')
-#
-# str = f.readline()
-# print(str)
-#
-# f.close()
+f = open('./foo.txt', 'r')
+
+str = f.readline()
+print(str)
+
+f.close()
 
 # 读取所有行
-# f = open('./foo.txt', 'r')
-#
-# lines = f.readlines()
-# print(lines)
-#
-# f.close()
+f = open('./foo.txt', 'r')
+
+lines = f.readlines()
+print(lines)
+
+f.close()
 
 # 直接迭代
 f = open('./foo.txt', 'r')
