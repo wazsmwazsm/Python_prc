@@ -26,6 +26,9 @@ print(type(Hello))
 print(type(h))
 
 # 使用元类 metaclass
+# metaclass 创建类或者修改类，可以很方便的更具不同的条件
+# 给类绑定不同方法、属性
+
 # 按照默认习惯，metaclass的类名总是以Metaclass结尾
 class ListMetaclass(type):
     '''
@@ -37,14 +40,15 @@ class ListMetaclass(type):
 
         3. 类继承的父类集合；
 
-        4. 类的方法集合。
+        4. 类的属性、方法集合。
 
     '''
     def __new__(cls, name, bases, attrs):
+        # 添加属性、方法
         attrs['add'] = lambda self, value: self.append(value)
         return type.__new__(cls, name, bases, attrs)
-# metaclass 定义类, 这样可以动态的生产一些类，可以很方便的更具不同的条件
-# 建立不同的类
+
+# 重新订制 list 类
 class MyList(list, metaclass = ListMetaclass):
     pass
 
